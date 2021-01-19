@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './ToDoList.css';
 
@@ -65,7 +66,7 @@ class ToDoList extends React.Component {
         // loop that insert the array of list in the list. checking the counter of undone items
         for (let i = 0; i < this.state.listArr.length; i++) {
             const listContent = (
-                <li>     <input type="checkbox" checkedDefault={this.state.listArr[i].done} onChange={() => this.checkedItem(this.state.listArr[i].index)} />
+                <li>      <input type="checkbox" checkedDefault={this.state.listArr[i].done} onChange={() => this.checkedItem(this.state.listArr[i].index)} />
                     <span>{this.state.listArr[i].value} </span>
                     <span>    </span>
                     <button type="button" onClick={() => this.handleRemove(i)}>x</button>
@@ -94,7 +95,6 @@ class ToDoList extends React.Component {
         return (
             <div>
                 <h1>To Do List</h1>
-
                 <input id="newItemValue" placeholder="Enter task">
                 </input>
                 <button onClick={this.addItem}>Add</button>
